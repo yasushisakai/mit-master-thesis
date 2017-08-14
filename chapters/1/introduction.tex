@@ -2,12 +2,14 @@
 
 \section{Overview}
 
-Technology and its products influence public norms, which then will affect tools; both have a mutual dependence. This thesis positions a novel tool for civic engagement within this loop of society and technology influencing each other. \hlcyan{Mechanisms that work with the combination of technology and societies are sociotechnical systems.\cite{bruno1992missing} \footnote{
+Technology and its products influence public norms, which then will affect tools; both have a mutual dependence. This thesis positions a novel tool for civic engagement within this loop of society and technology influencing each other. \hlcyan{Mechanisms that work with the combination of technology and societies are sociotechnical systems.{\cite{bruno1992missing}} \footnote{
 Bruno puts the goal of socialtechnical study is:
+{\tiny
 \begin{quotation}
 to follow the dynamic of reinscription
 transforming a silent artifact into a \textit{polemical} process.
 \end{quotation}
+}
 }}
 
 \begin{figure}[!htb]
@@ -20,7 +22,7 @@ transforming a silent artifact into a \textit{polemical} process.
 Traditionally the urban planning process accommodates public feedback through public meetings for voicing concerns from the community. \hlcyan{Opening a public meeting is perhaps the most basic and dominant method of today's public engagement method used in urban planning.} The planners, government, and stakeholders will interpret the input, and plan and execute interventions that consider citizens' feedback. We can think of this as a necessity to accommodate feedback once cities become too large for governance via a direct democratic approach.
 \begin{figure}[!htb]
  	\includegraphics[width=\textwidth]{chapters/1/fig/community_engagement.png}               
- 	 \caption[externalized proposal]{Demand from both the planners (wicked problem \cite{churchman1967guest}) and the community (evidence of urbanization leads to democratization \cite{woolley2010evidence})to externalize the proposal (rectangle with P). Now citizens can provide feedback and co-design the interventions. This
+ 	 \caption[externalized proposal]{\protect\raggedright Demand from both the planners (wicked problem \cite{churchman1967guest}) and the community (evidence of urbanization leads to democratization \cite{woolley2010evidence})to externalize the proposal (rectangle with P). Now citizens can provide feedback and co-design the interventions. This
 is the typical diagram for today's community engagement. The planners are still proposing the plans which are the primary generator of solutions.
 }
   	\label{fig:spin_margin}
@@ -36,8 +38,9 @@ The evolution of technological tools for urban planning and their relationship t
 
 \begin{figure}[!htb]
  	\includegraphics[width=\textwidth]{chapters/1/fig/cityscope.png}               
- 	 \caption[diagram: cityscope model]{The cityscope model covers the analysis through the prioritization phase. Apart from the visualization and tangible interface, it is a tool
-for iterating the analytical phase and synthetic phase. Note the arrow from Planners to the Plan is approval, which the plan generation is a collective collaboration from the whole \hlcyan{community.}\cite{moe2016illuminate}}
+ 	 \caption[diagram: cityscope model]
+ 	 {\protect \raggedright The cityscope model covers the analysis through the prioritization phase. Apart from the visualization and tangible interface, it is a tool for
+ 	 iterating the analytic phase and synthetic phase. Note the arrow from Planners to the Plan is approval, which the plan generation is a collective collaboration from the whole community. \cite{moe2016illuminate}}
   	\label{fig:diagram_cityscope}
 \end{figure}
 
@@ -48,7 +51,7 @@ This thesis looks at a specific topic in urban planning: making cities more acce
 
 \begin{figure}[!htb]
  	\includegraphics[width=\textwidth]{chapters/1/fig/bikebump.png}               
- 	 \caption[diagram: bikebump]{\hlcyan{This thesis proposes and implements an integrated tool that prioritizes contextualized data collection used for urban planning interventions.}}
+ 	 \caption[diagram: bikebump]{This thesis proposes and implements an integrated tool that prioritizes contextualized data collection used for urban planning interventions.}
   	\label{fig:diagram_bikebump}
 \end{figure}
 
@@ -65,24 +68,28 @@ This thesis looks at a specific topic in urban planning: making cities more acce
 % \end{figure*}
 
 Chapter 4 will look into implementation; not only the actual development of the tool, but a schematic of how this approach may be integrated into the real situation. 
-\hlcyan{This proposed method has two major differences compared to the method that is currently conducted through the United States.} One, the box has inputs in two different directions from the community, indicating the data analysis and plan synthesis. Two, the planners\footnote{Metropolitan Planning Organization} and the mayor\footnote{sometimes referred as the city CEO} will have a different type of \hlcyan{role} when it comes to approving and modifying the metrics to align with the long running plans. The chapter will cover the comparison of the current standard process, with the tools and methods used for developing this web-based application, and the procedure of how it will work. It will also cover the  experiment conducted to see the application's performance. Figure 6 shows the procedure of the user experience. The application has access to the phone's microphone and can detect the ring of a bicycle bell throughout the commute, saving a short sound clip of the moment before the bell ring. The sound data, the number of consecutive rings and geolocation will be sent to the server for further analysis. The data will be mapped to a web browser interface that others would be able to observe. After the commute, the application will show a set of binary choice questions to ask specifically how the situation on the street where the bell was sounded could be improved. In addition, the application will solicit improvement plans from each user to form a collective entity. The discussion will then move the target to how this trial could fit in a general way on community engagement.
-
-\begin{figure}[!htb]
- 	\includegraphics[width=\textwidth]{chapters/1/fig/how_it_works.png}               
- 	 \caption[how bike bump works]{
-The flow of user interaction
+\hlcyan{This proposed method has two major differences compared to the method that is currently conducted through the United States.} One, the box has inputs in two different directions from the community, indicating the data analysis and plan synthesis. Two, the planners\footnote{Metropolitan Planning Organization} and the mayor\footnote{sometimes referred as the city CEO} will have a different type of \hlcyan{role} when it comes to approving and modifying the metrics to align with the long running plans. The chapter will cover the comparison of the current standard process, with the tools and methods used for developing this web-based application, and the procedure of how it will work. It will also cover the  experiment conducted to see the application's performance. Figure \ref{fig:how} shows the procedure of the user experience. 
 \begin{enumerate}
     \item User rings the bell if there is something worth reporting (a DING). Simple protocol of single DING indicating ``unsafe/dangerous'' and double DING indicating ``safe/pleasant''
-    \item Smartphone detecting the frequency of the bell
+    \item Smart phone detecting the bell sound from pre-calibrated frequency \footnote{The application has access to the phone's microphone and can detect the ring, saving a short sound clip of the moment before the bell ring. }
     \item Geolocation, ``dangerous/pleasant'' value, and sound clip sent to database
-    \item Visualized to map
-    \item User provides complementary information about the DING. Users can also propose an improvement plan by selecting a solution and the road.
+    \item The data will be mapped to a web browser interface that others would be able to observe.
+    \item User provides complementary information about the DING.
+    \item User propose an improvement plans by selecting a solution and the road.
+    \item User votes for improvement plans the agree to have.
 \end{enumerate}
-}
-  	\label{fig:how}
+\begin{figure}[!htb]
+    \includegraphics[width=\textwidth]{chapters/1/fig/how_it_works.png}               
+    \caption[how bike bump works]{
+        The flow of user interaction. 1.user rings bell 2.smart phone detects bell 3.data sent to server 4.visualized onto Map 5. followup questions, proposing improvement plans, and voting.
+    }
+    \label{fig:how}
 \end{figure}
-
 \section{Contribution}
-The main contributions of the thesis are to connect citizens into the urban planning process through a novel technological solution. By harnessing feedback from individual bicyclists, the the tool opens the urban planning process beyond mayors, professional planners
-and includes average citizens \hlcyan{who can collectively architect} the physical
-environment surrounding use. It may also help the planning side to understand the residents' demands. In addition, the schema for the new urban planning support tool will externalize the process plan analysis and synthesis, which is often tacit knowledge within the planners. The study proposes a bi-directional communication method to connect the top and bottom of the process.
+The main contributions of the thesis are to connect citizens into the urban planning process through a novel technological
+solution. By harnessing feedback from individual bicyclists, the the tool opens the urban planning process
+beyond mayors, professional planners and includes average citizens \hlcyan{who can collectively architect} the physical
+environment surrounding use. It may also help the planning side to understand the residents' demands.
+In addition, the schema for the new urban planning support tool will externalize the process plan analysis and synthesis,
+which is often tacit knowledge within the planners. The study proposes a bi-directional communication
+method to connect the top and bottom of the process.

@@ -22,20 +22,22 @@ live, work, and recreate on a day-to-day basis''} \cite{roof2008public}\hlcyan{,
 }
 Inside the built environment, we have the social environment, which is the community. The arrow from the community shows that it modifies the infrastructure.
 
+\begin{figure}
+    \includegraphics[width=\textwidth]{chapters/2/fig/primitive.png}               
+    \caption[layers of environments]{
+        The first form of a city and layers of environments. We see the community or the society in the middle,
+        which is the social environment. The social environment is included in the `built environment', a physical and
+        artificial region, that was first realized in Athens. The infrastructure functions as the border between this artificial
+        region and the rest. The arrow indicates the community modifies the infrastructure to meet their own needs. Athens is considered
+        a communal city, which the physical and artificial environment was planned first, before community was allocated.
+    }
+    \label{fig:diagram_primitive}
+\end{figure}
+
 This simplest form does not have any distinction within the community; it is small enough that the entire process is lead, examined, and executed from the whole.
 The Athenian direct democracy is the earliest of its form of democracy that has been found documented \cite{ober2008democracy}
 \footnote{It is recognized that the Athens had constantly imitate social institution from others, so it is not clear weather it is the first of its kind.}
 . While we may see this as a pure form of equal political participation, it was open only to men over 18 that had military practice having the right to speak and vote during each gathering. Moreover, critics pointed out that it was biased by individual member groups which dominated the proceedings, and knowledge levels were unbalanced far from an informed decision. Despite these impurities, it is considered the very first form of direct democracy and people gathered on the hill of Pnyx as frequent as once every ten days. The hill of Pnyx had the capacity of 5000 to 13,000 people \footnote{This number of range is close to the population of the neighborhoods in Cambridge, MA \url{http://www.cambridgema.gov/~/media/Files/CDD/FactsandMaps/profiles/demo_profile_neighborhood_2016.pdf?la=en}}, and the resolved issues took immediate effect.
-
-
-\begin{figure}
-  \includegraphics[width=\textwidth]{chapters/2/fig/primitive.png}               
-  \caption[layers of environments]{\textfb{The first form of a city and
-layers of environments}\\ We see the community or the society in the middle, which is the social environment. The social environment is included in the `built environment', a physical and artificial region, that was first realized in Athens. The infrastructure functions as the border between this artificial region and the rest. The arrow indicates the community modifies
-the infrastructure to meet their own needs. Athens is considered a communal city, which the physical and artificial environment was planned first, before community was allocated.
-}
-  \label{fig:diagram_primitive}
-\end{figure}
 
 As it was primitive in the context of democracy, it was primitive in the sense
 of urban planning as well. Before this era, cities spontaneously emerged by villages
@@ -48,19 +50,17 @@ Lessig points out in \underline{Code: And Other Laws of Cyberspace} that there a
 One form of direct democracy that we can observe today is the town meetings in the northeast region of the United States. In Massachusetts, cities with a population of fewer than 6,000 are allowed to open town meetings and autonomously decide social issues. Although the types of issues are different compared to the times of ancient Greece, it is similar that the citizens pass knowledge and have interactions with one another, and collectively plan their city.
 
 
-\begin{marginfigure}[{-20cm}]
+\begin{marginfigure}[{-15cm}]
   \includegraphics[width=\textwidth]{chapters/2/fig/town_meeting01.png}               
-  \caption[town meetings: moderator]{town meetings}
+  \caption[town meetings: moderator]{a town meeting at Warren MA, 2014.11}
   \label{fig:town_meeting}
 \end{marginfigure}
 
-\begin{marginfigure}[{-10cm}]
+\begin{marginfigure}[{-5cm}]
   \includegraphics[width=\textwidth]{chapters/2/fig/town_meeting02.png}               
-  \caption[town meetings: voting]{standing up for vote}
+  \caption[town meetings: voting]{citizens show their opinion by standing up and down.}
   \label{fig:spin_margin}
 \end{marginfigure}
-
-\marginnote{a town meeting at Warren MA, 2014.11}
 
 It is said that the Roman Republic started this representative democracy, and the global majority have lived in this form of democracy since then. The world's total population has continued to rise, having both more population and density.
 \hlcyan{The cost for deliberation}
@@ -78,30 +78,42 @@ It is said that the Roman Republic started this representative democracy, and th
 
 \begin{figure}[!htb]
   \includegraphics[width=\textwidth]{chapters/2/fig/opinion.png}               
-  \caption[representative democracy]{As cities grew in size and density, it was no longer feasible to operate in a direct democracy model. The social environment changed its size into a pyramid where planners, governors, stakeholders, land owners plan and execute to change the city's infrastructure.\\ The top part of
-the pyramid gathers data from the community. This is accomplished in various ways and media technology have been innovated to do this. Now the community is able to individually provide opinions to the planners.}
+  \caption[representative democracy]{
+  As cities grew in size and density, it was no longer feasible to operate in a direct democracy model.
+  The social environment changed its size into a pyramid where planners, governors, stakeholders,
+  land owners plan and execute to change the city's infrastructure.
+  The top part of the pyramid gathers data from the community.
+  This is accomplished in various ways and media technology have been innovated to do this.
+  Now the community is able to individually provide opinions to the planners.
+  }
   \label{fig:diagarm_opinion}
 \end{figure}
 
 Figure \ref{fig:diagarm_opinion} shows this pyramid structure, a top down method that is elected by the broad community. Media technology, such as telephones and email, allowed the crowd to have a communication path to the top. Yet the form of communication is very different from town meetings, since these media are usually isolated, one to one methods of communications.
 
 Methods to effectively collect opinions in a centralized way 
-were invented by the planners. We can categorize these methods based on the amount of information that is exchanged (Figure \ref{fig:spectrum}). \hlcyan{The smaller the information per transaction, the easier to process, which influences the design of the tool.} For example, polls and surveys are limited in information but are easy to visualize or even directly interpret as the collective decision.
-
+were invented by the planners. We can categorize these methods based on the amount of information that is exchanged (Figure \ref{fig:spectrum}). \hlcyan{The smaller the information per transaction, the easier to process, which influences the design of the tool.} For example, polls and surveys are limited in information but are easy to visualize or even directly interpret as the collective decision. The amount of data can be quantifiable by calculating the entropy\cite{shannon1998mathematical}:
+\[ H = \sum_{i=1}^{n}P(x_i)log_2P(x_i) \]
 \begin{figure}[!htb]
   \includegraphics[width=\textwidth]{chapters/2/fig/spectrum.png}               
-  \caption[number of bits per transaction]{The smaller the amount (bits) of information processed within one transaction, the easier to process. As it gets larger, it becomes unstructured data, which is hard to directly convert to a decision or intervention. Numbers indicate the average amount of information for each method of interaction. This is often referred as the entropy.\cite{shannon1998mathematical}
-  \[H = \sum_{i=1}^{n}P(x_i)log_2P(x_i) \] \\
-  Note that that there is `unconstrained' methods, which the information is unlimited.}
+  \caption[number of bits per transaction]{
+  The smaller the amount (bits) of information processed within one transaction,
+  the easier to process. As it gets larger, it becomes unstructured data, which is hard to directly convert to a decision or
+  intervention. Numbers indicate the average amount of information for each method of interaction.
+  Note that that there is `unconstrained' methods, which the information is unlimited.
+  }
   \label{fig:spectrum}
 \end{figure}
-
 The other side of the spectrum has the richest information and can be seen in organized events to gather people in one place which includes workshops, focus groups, \dots etc. Although these events are organized and centralized to make it effective for the head of the pyramid to listen, events are open ended, vocal, and unstructured, making it difficult to know the influence on the proposals the city made. \hlcyan{We can seek a form of interaction that is more communicative than a vote, but more structured than open discussion.} In any case, this information can be exchanged between participants, and it is influenced by what kind of media is used for this method.
-
 \begin{figure}[!htb]
-  \includegraphics[width=\textwidth]{chapters/2/fig/unstructured_app.png}               
-  \caption[diagram: unstructured app]{
-    Modern technology enables the community to provide data in a centralized way through collaborative data collection and analysis. Compared to the methods that do not leverage the media technology, these are better at collecting more data at once, since there are no physical constraints for gathering.}
+    \includegraphics[width=\textwidth]{chapters/2/fig/unstructured_app.png}               
+    \caption[diagram: unstructured app]{
+        Modern technology enables the community to provide data in a centralized way through
+        collaborative data collection and analysis.
+        Compared to the methods that do not leverage the media technology,
+        these are better at collecting more data at once,
+        since there are no physical constraints for gathering.
+        }
   \label{fig:unstructured_app}
 \end{figure}
 
@@ -183,7 +195,7 @@ Finding the right design program for a given problem is the first phase of the d
 \end{quotation}
 
 There are few attempts that distinguish these two processes. Having the premise that these two are different, there are fewer attempts to integrate them into the same platform. Figure\ref{fig:collective_design} shows one example of such a platform.
-\hlcyan{The synthetic phase referred by architects was often a process done by an individual, which is a process of deciding trade offs and find the right configurations that most fits the context of a given problem. By inventing \underline{the Pattern Language}, Alexander created a method to synthesize an architecture plan through a deliberation process.\cite{schulerpattern}}
+\hlcyan{The synthetic phase referred by architects was often a process done by an individual, which is a process of deciding trade offs and find the right configurations that most fits the context of a given problem. By inventing {\underline{the Pattern Language}}, Alexander created a method to synthesize an architecture plan through a deliberation process.{\cite{schulerpattern}}}
 
 \begin{figure}[htb]
   \includegraphics[width=\textwidth]{chapters/2/fig/bikebump.png}               
@@ -193,4 +205,4 @@ There are few attempts that distinguish these two processes. Having the premise 
 
 
 \subsection{Extending Collective Intelligence}
-Artificial intelligence has been gaining attention because these technologies have advanced through the increase of available data as training sets. A substantial amount of data for training machines originates from human input, which is at the same time used for training (learn and teach) humans. Today we know this is a form of collective intelligence, which the inputs from the citizens are included in this category. Extended intelligence is a concept to acknowledge that intelligence was always a network and should incorporate both artificial intelligence and collective intelligence to utilized them mutually.\cite{pubpub:extended} Hidalgo points out that network intelligence existed from the beginning and cities are “pockets where our species accumulates the capacity to produce information”.\cite{hidalgo2015information} He mentions that the novelty is today's technological context where computational resources have been distributed more than ever before.\cite{pubpub:whatsnew} Research says that the combination of these two types of intelligence has potential to overcome the performance\cite{baharad2011distilling} in fields that were thought to have little or no difference comparing professionals and nonprofessionals. (p\pageref{subsec:wicked}) With the collective and the artificial intelligence combined, the tool will now \hlcyan{learn} and augment the community.
+Artificial intelligence has been gaining attention because these technologies have advanced through the increase of available data as training sets. A substantial amount of data for training machines originates from human input, which is at the same time used for training (learn and teach) humans. Today we know this is a form of collective intelligence, which the inputs from the citizens are included in this category. Extended intelligence is a concept to acknowledge that intelligence was always a network and should incorporate both artificial intelligence and collective intelligence to utilized them mutually.\cite{pubpub:extended} Hidalgo points out that network intelligence existed from the beginning and cities are ``pockets where our species accumulates the capacity to produce information''.\cite{hidalgo2015information} He mentions that the novelty is today's technological context where computational resources have been distributed more than ever before.\cite{pubpub:whatsnew} Research says that the combination of these two types of intelligence has potential to overcome the performance\cite{baharad2011distilling} in fields that were thought to have little or no difference comparing professionals and nonprofessionals. (p\pageref{subsec:wicked}) With the collective and the artificial intelligence combined, the tool will now \hlcyan{learn} and augment the community.

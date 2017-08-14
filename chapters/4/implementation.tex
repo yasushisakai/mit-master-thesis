@@ -4,20 +4,18 @@
 To test a system that handles \hlcyan{data collection, visualization, plan proposal and prioritization}, an application for improving bike lanes was selected for a case study. Using bikes to commute has been a trend through recent years though the U.S.;  one consensus shows that there was a 3\% increase in people choosing bikes for everyday transportation from 2010 to 2013 and is close to double compared to the year 2000.\cite{debra2016onemillion} \hlcyan{City investment in bicycling infrastructure is in sync with this increase in bicycling as a method for commuting, especially in dense urban areas.} \hlcyan{New York has had 400 miles of cycle path renewals} starting from the 2000s.\cite{sadik2017streetfight} The field of public health supports this by research showing investment in \hlcyan{bike lanes is efficient} compared to other public health interventions\cite{gu2016cost}.
 \footnote{The study compares different health investment by the QALY value(how much money is needed to gain one persons one year of public health.) The results shows that vaccines are exceptionally cheap (\$100), bike lane investment(\$1300) is also in the cheaper side where \$6,700 is spent for Medicaid.}
 
-
 \subsection{bike lanes in urban planning}
 Urban planning interventions tend to be exceptionally expensive\footnote{the United States have invested \$ 350 billion in the year of 2010 \cite{musick2010public}, and 416 billion in 2016\\ \url{https://www.cbo.gov/sites/default/files/114th-congress-2015-2016/reports/49910-Infrastructure.pdf}}, yet the process for deciding which to execute is also long and tedious. Because of this slow process and cost impact, it is difficult to make the proposal creation as a learning process. In the United States, the construction cost for a highway is 8 million to 10 million USD per mile, where one of the most expensive bike lanes will cost 445,000 USD per mile.\hlcyan{Bike lanes are relatively inexpensive; the simplest ones require only paint on the road surface.} Moreover, these interventions are reversible, \hlcyan{which enables iteration through trial and error.}
 \hlcyan{While some interventions, like painting bike lanes, are cheap and reversible, and thus possible to implement quickly, other interventions are more expensive and require a great deal of domain knowledge and engineering. Implementing these solutions will inevitably a slow process.} It is difficult to design or even reach a consensus within the community. Because of the duration, ``straw polls'' may not directly reflect the demand of citizens when the construction is actually completed, especially where people tend to move frequently. Yet there are examples that the demand of such long and costly infrastructure is decreasing, since this relates to different types of transportation people use. If the trend of the number of cars decreasing continues and multi-modal transportation is accepted, light interventions such as bike lane improvements will raise the share, supported by the trend of the increase of population density, the cost impact per population will decrease.
 
-\subsection{\hlcyan{bike way infrastructure}}
+\subsection{bike way infrastructure}
 
-The report \underline{2012 National Survey on Bicyclist and Pedestrian Attitudes and Behaviors} shows that collision with cars is the top factor of bicyclists injury\cite{schroeder20132012}, so it is crucial to clearly separate cars and bicycles. The second(`falling') and third(`road not in good condition') cause could also be reduced by having a separate bike lanes. Research shows that protected bike lanes reduces possibility for injury in to half.\cite{teschke2012route}
+The 2012 national survey on \underline{Bicyclist and Pedestrian Attitudes and Behaviors} shows that collision with cars is the top factor of bicyclists injury\cite{schroeder20132012}, so it is crucial to clearly separate cars and bicycles. The second(`falling') and third(`road not in good condition') cause could also be reduced by having a separate bike lanes. Research shows that protected bike lanes reduces possibility for injury in to half.\cite{teschke2012route}
 
-Over 36\% within the population of Netherlands chose bicycles as their main mode of transportation. Relative to other countries, the Netherlands had always been keen investing bike infrastructure, even times when urban planning was aiming for a car-centric society. Investment for bike way improvements started to rise again around 1970 coupled with a protest movement to prevent children killed by car accidents. Today Amsterdam is known to be the most bike friendly city, yet there is no single solution that makes bikes this popular, this is again an example of Lessig's four elements of constraints in human behavior. For ``code'', it is easy to think it has rich bike lane infrastructure which is well connected. Moreover, the Netherlands has flat and high density geographic characters that well suits bicycle commute. ``Law'' constrains all urban planning to be fully accountable for bike lanes. Also the legislation is unfavorable for car which need to compensated most of the damage if there is an accident.  
+\hlcyan{Over 36\% within the population} of Netherlands chose bicycles as their main mode of transportation. Relative to other countries, the Netherlands had always been keen investing bike infrastructure, even times when urban planning was aiming for a car-centric society. Investment for bike way improvements started to rise again around 1970 coupled with a protest movement to prevent children killed by car accidents. Today Amsterdam is known to be the most bike friendly city, yet there is no single solution that makes bikes this popular, this is again an example of Lessig's four elements of constraints in human behavior. For ``code'', it is easy to think it has rich bike lane infrastructure which is well connected. Moreover, the Netherlands has flat and high density geographic characters that well suits bicycle commute. ``Law'' constrains all urban planning to be fully accountable for bike lanes. Also the legislation is unfavorable for car which need to compensated most of the damage if there is an accident.  
+
 \section{Current method for changing bike related infrastructure}
 The Transportation Improvement Program is a federal requirement for each state listing improvements for all transportation needs. This is the standard throughout the U.S. and bike lane improvements are included.
-
-
 \begin{figure*}[!htb]
   \includegraphics{chapters/4/fig/tip_process.png}               
   \caption[TIP process]{TIP(Transportation Improvement Program) required by each state. \url{https://www.gpo.gov/fdsys/pkg/USCODE-2011-title23/html/USCODE-2011-title23-chap1-sec135.htm} 
@@ -71,16 +69,13 @@ The following are definitions for certain elements that make up the application.
 
 A DING is a spatial representation of a ring bell report. It defines the geofence of the ding, with a center geolocation and radius. It also holds information for each report, which is the timestamp, user's ID, and the ``good''/``bad'' value based on the study protocol. If there is a road near the center location, it will also contain the road's identifier and distance from the closest point of that road.
 
-
 \textbf{ROAD}
 
 A ROAD is a geometrical feature that is returned by the Vector map API call. A newly created ding will find the closest road registered in the OpenStreetMap database and geometrical features will be copied to the bikebump database. When creating an improvement plan, users will first need to choose which
 
-
 \textbf{COMMUTE}
 
 A COMMUTE is series of GPS location data, to know the whole path of each ride session. Raw GPS data has a tendency to bounce and contain noise, so it will be processed to match the road network in OpenStreetMaps.
-
 
 \textbf{BIKE COINS}
 
@@ -90,13 +85,11 @@ BIKE COINS are the \hlcyan{tokens} for deciding which intervention to prioritize
 
 An IMPROVEMENT PLAN is a combination of a CONTEXT and a SOLUTION. This method of having a separate list of where (CONTEXT) and what (SOLUTION) and combining them is taken from Christopher Alexander‘s methodology of \underline{The Pattern Language}. \cite{alexander1977pattern}
 
-
 The method of defining patterns (a recipe what to do in order to come up with an outcome) and apply them to common cases is widely used in the realm of software engineering as design patterns. 
 \footnote{Although Alexander himself claims that “design patterns” in software is different to what he had created, since the patterns are distinctive, having no interrelation between them. \url{https:// www.youtube.com/watch?v=98LdFA-_zfA}
 }
 
 Each IMPROVEMENT PLAN holds information of how many BIKE COINS it requires to be counted as a community approved plan. This number can be calculated using the SOLUTION‘s type and unit cost, multiplied by the length of the road.
-
 
 \textbf{SOLUTION}
 
@@ -104,22 +97,29 @@ This is the execution instructions for a possible plan, such examples are creati
 
 For the experiment, three solutions where provided  (Table \ref{tab:solution}).
 
+%%
+%% TODO
+%%
+
 \begin{table}
   \centering
   \begin{tabular}{|c|c|r|}
-  \hlcyanine
-    SOLUTION & type & unit cost (m) \\ \hlcyanine
+  \hline
+    SOLUTION & type & unit cost (m) \\ \hline
     Green Paint & road & 25\\ 
     Bike Box & intersection & 320\\ 
     Plastic Polls & road & 75 \\
-    \hlcyanine
+    \hline
   \end{tabular}
   \caption[solutions]{Solutions provided for Experiments.
     Values are estimated by material cost. Dimensions are taken from the
     Urban Bikeway Design Guide\cite{national2014urban}. Green Paint is
-    \[5ft (W) * 2 (both sides)\] 
+    
+    5ft (W) * 2 (both sides)
+    
     BikeBox is
-    \[12ft (W) * 16ft (H) \]
+    
+    12ft (W) * 16ft (H)
 
     Cost estimation can be done here 
     \url{http://www.asphaltkingdom.com/parking-lot-paint-calculator}
@@ -262,9 +262,8 @@ Each test took around 1.5 hours. The experiment had four steps.
 The first was the orientation, where the examiner introduced the objective of the user test, gained subject's consent,
 asked for the initial survey, showed how the application works, and talked about the route of the on-bike experiment.
 
-
 \begin{figure}[htb]
-  \includegraphics[\textwidth]{chapters/4/fig/fixed_route.png}             
+  \includegraphics[width=1.0\textwidth]{chapters/4/fig/fixed_route.png}             
   \caption[fixed route map]{route for the experiment}
   \label{fig:route}
 \end{figure}

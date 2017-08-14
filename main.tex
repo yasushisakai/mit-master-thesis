@@ -47,7 +47,12 @@
 \usepackage{soul}
 \usepackage{color}
 
+%% for highlighting
 \newcommand{\hlcyan}[1]{{\sethlcolor{cyan}\hl{#1}}}
+
+%% wishing to get rid of @iiminipage error
+\usepackage[caption=false]{subfig}
+
 
 \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
 
@@ -113,33 +118,31 @@
 \exhyphenpenalty=10000
 \sloppy
 
-
-
-\include{cover}
+% \include{cover}
 % Some departments (e.g. 5) require an additional signature page.  See
 % signature.tex for more information and uncomment the following line if
 % applicable.
 % \include{signature}
 % \pagestyle{plain}
-% \include{contents}
-% \include{chapters/1/introduction}
-% \include{chapters/2/background}
-% \include{chapters/3/extendedExamples}
-% \include{chapters/4/implementation}
-% \include{chapters/5/discussion}
-% \include{chapters/6/conclusion}
+\include{contents}
+\include{chapters/1/introduction}
+\include{chapters/2/background}
+\include{chapters/3/extendedExamples}
+\include{chapters/4/implementation}
+\include{chapters/5/discussion}
+\include{chapters/6/conclusion}
 
-% % \appendix
-% \include{appendix/A/traditionalMethods}
-% \include{appendix/B/bad_parts}
-% \include{appendix/C/afterQuestions}
-% \include{appendix/D/passingObservation}
-% \include{appendix/E/CNN}
-% \include{appendix/G/good_parts}
-% \include{appendix/H/couhes}
-% \include{appendix/I/api}
-% \include{appendix/J/repos}
-% \nocite{*}
-% \include{biblio}
+\appendix
+\include{appendix/A/traditionalMethods}
+\include{appendix/B/bad_parts}
+\include{appendix/C/afterQuestions}
+\include{appendix/D/passingObservation}
+\include{appendix/E/CNN}
+\include{appendix/G/good_parts}
+\include{appendix/H/couhes}
+\include{appendix/I/api}
+\include{appendix/J/repos}
+\nocite{*}
+\include{biblio}
 \end{document}
 
