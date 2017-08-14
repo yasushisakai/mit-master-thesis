@@ -1,0 +1,42 @@
+\chapter{Appendix I. used framework and external APIs}
+\label{appi:api}
+
+Modern browsers have extended their functionality to enable rich forms of communication that was limited to mainly text and static images. Compared to native application development, basing on the browser have an advantage to be cross platform compatible across devices. The main trade off on building on top of browsers is performance, which comes from the limitation of only having an interpreter language (javascript) for computation. Using browser technology for general usage beyond web browsing is accepted in different cases, and there are some frameworks that enables compile native applications\footnote{applications that work outside the browser} still using the capabilities of the browser. Refer to \nameref{appj:repo} for links to the actual code.
+
+The following is the types of frameworks required to develop bike bump.
+
+\section{Web API}
+Web APIs are functionalities provided natively by the browser with small overheads.
+\begin{enumerate}
+    \item WebRTC API (real time communication)\\
+    used for getting microphone output
+    \item WebAudio API \\
+    browser native audio processing
+        \begin{enumerate}
+            \item Analyzer Node (FFT, filtering)
+            \item Recorder Node
+        \end{enumerate}
+    \item Geo Location API
+    \item File Storage API\\
+    to temporary store sound clip data
+    \item Vibration API\\
+    for heptic feedback
+    \item Web Workers API\\
+    background thread for audio
+\end{enumerate}
+
+\section{Map Frameworks}
+\begin{enumerate}
+    \item Map visualization framework
+    \item Map Vector Tiles API \\
+    query path information from tile coordinates
+    \item Map Matching API \\
+    conversion of raw GPS readings to coordinates aligned to road network
+\end{enumerate}
+
+\section{Others}
+\begin{enumerate}
+    \item Front End Framework (ReactJS)
+    \item Back End Framework (NodeJS)
+    \item Database (Firebase)
+\end{enumerate}

@@ -41,6 +41,14 @@
 \usepackage{geometry}
 \usepackage{longtable}
 \usepackage{caption}
+\usepackage{pdfpages}
+\usepackage{nameref}
+
+\usepackage{soul}
+\usepackage{color}
+
+\newcommand{\hlcyan}[1]{{\sethlcolor{cyan}\hl{#1}}}
+
 \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
 
 %% These have been added at the request of the MIT Libraries, because
@@ -100,13 +108,20 @@
 
 \begin{document}
 
-% \include{cover}
+\justify
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\sloppy
+
+
+
+\include{cover}
 % Some departments (e.g. 5) require an additional signature page.  See
 % signature.tex for more information and uncomment the following line if
 % applicable.
 % \include{signature}
-\pagestyle{plain}
-\include{contents}
+% \pagestyle{plain}
+% \include{contents}
 % \include{chapters/1/introduction}
 % \include{chapters/2/background}
 % \include{chapters/3/extendedExamples}
@@ -114,11 +129,17 @@
 % \include{chapters/5/discussion}
 % \include{chapters/6/conclusion}
 
-\appendix
+% % \appendix
 % \include{appendix/A/traditionalMethods}
-% \include{appendix/B/usertest}
+% \include{appendix/B/bad_parts}
 % \include{appendix/C/afterQuestions}
-% \include{appendix/D/passiveObservation}
-\include{biblio}
+% \include{appendix/D/passingObservation}
+% \include{appendix/E/CNN}
+% \include{appendix/G/good_parts}
+% \include{appendix/H/couhes}
+% \include{appendix/I/api}
+% \include{appendix/J/repos}
+% \nocite{*}
+% \include{biblio}
 \end{document}
 
